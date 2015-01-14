@@ -21,7 +21,7 @@ catalogApp.controller('CatalogCtrl', ['$scope', '$http',
     };
 
     $scope.openLink = function () {
-      alert('Navigating to link: ' + this.item.name);
+      window.open(this.item.url);
     };
 
     $scope.onBreadcrumbClick = function () {
