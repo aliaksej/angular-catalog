@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "name": "Search engines",
+      "items": [
+        {"name": "Google", "url": "http://google.com"},
+        {
+          "name": "Others",
+          "items": [
+            {"name": "Link to yahoo", "url": "http://yahoo.com"},
+            {"name": "Link to yandex", "url": "http://yandex.ru"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Link 1"
+    },
+    {
+      "name": "Link 2"
+    }
+  ]
+}

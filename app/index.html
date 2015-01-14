@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="catalogApp">
+<head>
+  <meta charset="utf-8">
+  <title>Catalog</title>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="CatalogCtrl">
+
+<div>
+    <span ng-repeat="breadcrumb in breadcrumbs">
+        <a href="" ng-click="!$last && onBreadcrumbClick()" style="{{$last ? 'text-decoration: none;color: black' : ''}}">
+          {{breadcrumb.name}} </a> /
+    </span>
+</div>
+
+<ol>
+  <li ng-repeat="item in items">
+    <a ng-if="item.items" ng-click="browseCategory()" href="">{{item.name}} </a>
+    <a ng-if="!item.items" ng-click="openLink()" href="">&#10150; {{item.name}}</a>
+  </li>
+</ol>
+
+</body>
+</html>
